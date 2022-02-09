@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install-root": "npm install",
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server",
+    "install-all": "run-s install-root install-client install-server",
     "server": "npm run dev --prefix server",
     "client": "npm run start --prefix client",
     "client:schema": "npm run codegen:schema --prefix client",
     "client:generate": "npm run codegen:generate --prefix client",
-    "client:codegen":"run-s client:schema client:generate",
-    "server:seed":"npm run seed --prefix server",
+    "client:codegen": "run-s client:schema client:generate",
+    "server:seed": "npm run seed --prefix server",
     "dev": "run-p server client"
   },
   "keywords": [],

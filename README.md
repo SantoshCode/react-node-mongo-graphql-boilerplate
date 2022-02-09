@@ -3,6 +3,8 @@
 ## Setup Guide
 
 * Clone this repo
+* `cd react-node-mongo-graphql-boilerplate`
+* Run `npm run install-all`
 * Fill your environment variables inside `.env` file inside server folder.
 * Run the server via `npm run server`.
 * Generate types code for client graphql via `npm run client:codegen`.
