@@ -1,0 +1,21 @@
+{
+    "parser": "@typescript-eslint/parser", // will specify how we will want to read and translate js code for it to understand, the default eslint parser "espre" doesn't recognize ts code. so we will use @typescript-eslint/parser
+    "parserOptions": { // allows us to specify the JavaScript language options you want to support. By default, ESLint expects ECMAScript 5 syntax
+        "ecmaVersion": "latest", // allows us to specify ecma version syntax we will use in our app
+        "sourceType": "module" //  we are using es6 module in our app
+    },
+    "extends": [ // allows us to extend rule for certain package, in this particular case we will specify, typescript eslint recommended package to extend
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "env": { // which env our eslint script is expected to run. "node": true => helps environment recognize unique node defintions
+        "node": true
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": { // here we can override rules from extends  "plugin:@typescript-eslint/recommended"  or we can even introduce new rules
+        "indent": "off", // since prettier will handle it we will turn off indent.
+        "@typscript-eslint/indent": "off"
+    }
+}

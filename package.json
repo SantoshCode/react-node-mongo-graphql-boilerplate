@@ -1,0 +1,21 @@
+{
+  "name": "react-node-mongo-graphql-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run start --prefix client",
+    "client:schema": "npm run codegen:schema --prefix client",
+    "client:generate": "npm run codegen:generate --prefix client",
+    "client:codegen":"run-s client:schema client:generate",
+    "server:seed":"npm run seed --prefix server",
+    "dev": "run-p server client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "4.1.5"
+  }
+}
