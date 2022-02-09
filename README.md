@@ -10,4 +10,5 @@
 * Run the server via `npm run server`.
 * Generate types code for client graphql via `npm run client:codegen`.
 * Stop the server
+* Seed the database `npm run server:seed`
 * Run `npm run dev`
